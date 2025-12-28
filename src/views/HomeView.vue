@@ -5,6 +5,7 @@
     <CustomText class="a2" tag="p" size="small">Merhaba Dünya</CustomText>
     <CustomText class="a3" tag="p" size="xsmall">Merhaba Dünya</CustomText>
     <CustomText tag="p" size="xxsmall">Merhaba Dünya</CustomText>
+    <IconHome />
   </div>
 </template>
 
@@ -13,7 +14,8 @@ import CustomText from '@/components/CustomText.vue'
 export default {
   name: 'HomeView',
   components: {
-    CustomText
+    CustomText,
+    home
   }
 }
 </script>
