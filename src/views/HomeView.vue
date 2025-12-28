@@ -1,21 +1,31 @@
 <template>
   <div class="home">
     <h1>Home</h1>
+    <CustomText class="a1" tag="p">Merhaba Dünya</CustomText>
+    <CustomText class="a2" tag="p" size="small">Merhaba Dünya</CustomText>
+    <CustomText class="a3" tag="p" size="xsmall">Merhaba Dünya</CustomText>
+    <CustomText tag="p" size="xxsmall">Merhaba Dünya</CustomText>
   </div>
 </template>
 
 <script>
+import CustomText from '@/components/CustomText.vue'
 export default {
-  name: 'HomeView'
+  name: 'HomeView',
+  components: {
+    CustomText
+  }
 }
 </script>
 
 <style scoped>
-h1 {
-  color: red;
-
-  @media (--t) {
-    color: blue;
-  }
+.a1 {
+  color: rgba(var(--ba8), 0.5);
+}
+.a2 {
+  color: rgb(var(--b3f));
+}
+.a3 {
+  color: rgb(var(--ba8));
 }
 </style>
