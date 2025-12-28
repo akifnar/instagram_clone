@@ -5,17 +5,18 @@
     <CustomText class="a2" tag="p" size="small">Merhaba Dünya</CustomText>
     <CustomText class="a3" tag="p" size="xsmall">Merhaba Dünya</CustomText>
     <CustomText tag="p" size="xxsmall">Merhaba Dünya</CustomText>
-    <IconHome />
+    <IconHome width="60" height="60" />
   </div>
 </template>
 
 <script>
 import CustomText from '@/components/CustomText.vue'
+import IconHome from '@/icons/home.svg'
 export default {
   name: 'HomeView',
   components: {
     CustomText,
-    home
+    IconHome
   }
 }
 </script>
