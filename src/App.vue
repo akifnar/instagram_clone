@@ -1,7 +1,28 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <nav class="app">
+    <MasterHeader />
+
+    <main class="main">
+      <Container>
+        <router-view />
+      </Container>
+    </main>
   </nav>
-  <router-view />
 </template>
+
+<script>
+import MasterHeader from './components/MasterHeader.vue'
+import Container from './components/CompContainer.vue'
+export default {
+  name: 'App',
+  components: {
+    Container,
+    MasterHeader
+  }
+}
+</script>
+<style scoped>
+.main {
+  padding-top: 40px;
+}
+</style>

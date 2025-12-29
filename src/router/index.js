@@ -1,17 +1,57 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/HomeView/index.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/DirectView',
+    name: 'Direct',
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+      import(/* webpackChunkName: "profile" */ '../views/DirectView/index')
+  },
+  {
+    path: '/ExploreView',
+    name: 'Explore',
+    component: () =>
+      import(/* webpackChunkName: "profile" */ '../views/ExploreView/index')
+  },
+  {
+    path: '/ProfileView',
+    name: 'Profile',
+    component: () =>
+      import(
+        /* webpackChunkName: "profile" */ '../views/ProfileView/index.vue'
+      ),
+    children: [
+      {
+        path: '',
+        name: 'ProfilePost',
+        component: () =>
+          import(/* webpackChunkName: "profile" */ '../views/ProfileView/post')
+      },
+      {
+        path: 'igtv',
+        name: 'ProfileIGTV',
+        component: () =>
+          import(/* webpackChunkName: "profile" */ '../views/ProfileView/igtv')
+      },
+      {
+        path: 'save',
+        name: 'ProfileSave',
+        component: () =>
+          import(/* webpackChunkName: "profile" */ '../views/ProfileView/save')
+      },
+      {
+        path: 'tag',
+        name: 'ProfileTag',
+        component: () =>
+          import(/* webpackChunkName: "profile" */ '../views/ProfileView/tag')
+      }
+    ]
   }
 ]
 
