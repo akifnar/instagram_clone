@@ -24,7 +24,7 @@
           <IconExploreFill v-if="$route.name === 'Explore'" />
           <IconExplore v-else />
         </router-link>
-        <router-link to="/ProfileView">ProfileView</router-link>
+        <router-link to="/ProfileView"><CompAvatar :size="26" /></router-link>
       </nav>
     </CompContainer>
   </header>
@@ -39,9 +39,11 @@ import IconExplore from '@/icons/explore.svg'
 import IconExploreFill from '@/icons/explore-fill.svg'
 
 import CompContainer from '@/components/CompContainer.vue'
+import CompAvatar from '@/components/CompAvatar.vue'
 export default {
   name: 'MainHeader',
   components: {
+    CompAvatar,
     CompContainer,
     IconHome,
     IconHomeFill,
